@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Verdancy</title>
+  <meta name="description" content="Get help with Verdancy — plant identification, care plans, subscriptions, Plant Buddies, and the real-tree program." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/verdancy_logo.png" />
+  <meta name="theme-color" content="#F6F8F3" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#12150F" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="/verdancy.css" />
+  <script>
+    (function () { try { var t = localStorage.getItem("verdancy-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
+  </script>
+  <style>
+    .support-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0 8px; }
+    .support-card { text-decoration: none; }
+    .support-card h3 { font-size: 17px; margin: 14px 0 6px; }
+    .support-card p { color: var(--text-secondary); font-size: 14.5px; }
+    .faq { border-top: 1px solid var(--separator); }
+    .faq details { border-bottom: 1px solid var(--separator); padding: 4px 0; }
+    .faq summary { cursor: pointer; list-style: none; padding: 18px 4px; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-size: 22px; color: var(--leaf); font-weight: 400; line-height: 1; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq .answer { padding: 0 4px 20px; color: var(--text-secondary); font-size: 15.5px; line-height: 1.7; }
+    .faq .answer a { color: var(--leaf); font-weight: 600; }
+    .contact-card { text-align: center; margin-top: 40px; }
+    .contact-card .btn { margin-top: 18px; }
+    @media (max-width: 720px) { .support-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Verdancy home">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20C4 10 10 4 20 4C20 14 14 20 4 20Z" fill="#EAF6EC"/><path d="M7 17C12 12 15.5 8.5 19 6" stroke="#2C5C33" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+        Verdancy
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/trees.html">Tree counter</a>
+        <a href="/support.html">Support</a>
+      </nav>
+      <div class="nav-right">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle dark mode">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm" href="/#pricing">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="prose-page">
+    <div class="prose">
+      <a class="back-home" href="/">← Back to home</a>
+      <h1>How can we help?</h1>
+      <p class="lead">Answers to the most common questions about identifying, caring for, and growing your plants with Verdancy.</p>
+
+      <div class="support-grid">
+        <a class="card support-card" href="#getting-started">
+          <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3>Getting started</h3>
+          <p>Scanning, identifying, and adding your first plants.</p>
+        </a>
+        <a class="card support-card" href="#subscriptions">
+          <span class="icon-circle terracotta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg></span>
+          <h3>Billing &amp; subscriptions</h3>
+          <p>Trials, renewals, restoring purchases, and cancelling.</p>
+        </a>
+        <a class="card support-card" href="#trees">
+          <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V9"/><path d="M12 13c-3.3 0-6-2.7-6-6 3.3 0 6 2.7 6 6Z"/><path d="M12 11c0-3.3 2.7-6 6-6 0 3.3-2.7 6-6 6Z"/></svg></span>
+          <h3>Real trees</h3>
+          <p>How the tree program and One Tree Planted work.</p>
+        </a>
+      </div>
+
+      <h2 id="getting-started">Getting started</h2>
+      <div class="faq">
+        <details open>
+          <summary>How does plant identification work?</summary>
+          <div class="answer">Open Verdancy, tap the camera, and point it at any plant. In seconds you'll get its name, taxonomy (family and genus), whether it's toxic to pets, and a confidence score. Your first scan is free; free accounts get 2 identifications per day.</div>
+        </details>
+        <details>
+          <summary>How accurate is the pet-safety information?</summary>
+          <div class="answer">We surface toxicity information to help you make informed choices, but identification and toxicity data can be imperfect. If a pet has eaten part of a plant or you're unsure, contact a veterinarian or a pet poison hotline right away. Verdancy is not a substitute for professional or veterinary advice.</div>
+        </details>
+        <details>
+          <summary>What are Plant Buddies?</summary>
+          <div class="answer">Every plant you save grows its own collectible chibi “bud” that blooms as you care for it — a warm little companion for each plant in your collection.</div>
+        </details>
+      </div>
+
+      <h2 id="subscriptions">Billing &amp; subscriptions</h2>
+      <div class="faq">
+        <details>
+          <summary>What do I get with Premium?</summary>
+          <div class="answer">Unlimited identification, the Diagnose tool for sick plants, personalized care plans, the Today tab, Plant Buddies, care streaks and stats — and the real-tree program. Premium is $39.99/year (with a 7-day free trial, about $3.33/month) or $7.99/month.</div>
+        </details>
+        <details>
+          <summary>How do I start or manage the free trial?</summary>
+          <div class="answer">The Annual plan includes a 7-day free trial. You won't be charged until the trial ends, and you can cancel any time before then from your Apple ID subscription settings.</div>
+        </details>
+        <details>
+          <summary>How do I cancel my subscription?</summary>
+          <div class="answer">Subscriptions are billed through your Apple ID, so they're managed in iOS: open <strong>Settings → [your name] → Subscriptions → Verdancy</strong>, then choose Cancel. Your Premium features stay active until the end of the current billing period.</div>
+        </details>
+        <details>
+          <summary>Can I get a refund?</summary>
+          <div class="answer">All purchases are processed by Apple, so refunds are handled by Apple under the App Store's policies — we generally can't issue them directly. You can request one at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</div>
+        </details>
+        <details>
+          <summary>How do I restore a purchase on a new device?</summary>
+          <div class="answer">Sign in with the same Apple ID you subscribed with, open Verdancy, and tap “Restore Purchases” on the paywall or in Settings.</div>
+        </details>
+        <details>
+          <summary>How do I delete my data or account?</summary>
+          <div class="answer">You can remove your plants and data from within the app's settings. To request full deletion of any data associated with your account, email <a href="mailto:verdancy.contact@gmail.com">verdancy.contact@gmail.com</a> and we'll take care of it.</div>
+        </details>
+      </div>
+
+      <h2 id="trees">Real trees</h2>
+      <div class="faq">
+        <details>
+          <summary>How many trees does my subscription plant?</summary>
+          <div class="answer">Each subscription plants <strong>10 real trees</strong> across your first subscribed year, plus one more for every care milestone you reach. Trees are staggered over the year rather than all at once.</div>
+        </details>
+        <details>
+          <summary>Who actually plants the trees?</summary>
+          <div class="answer">All trees are funded and planted through <a href="https://onetreeplanted.org" target="_blank" rel="noopener">One Tree Planted</a>, a reforestation non-profit. You can watch the running total on our <a href="/trees.html">live tree counter</a>.</div>
+        </details>
+      </div>
+
+      <div class="card contact-card">
+        <h2 style="margin-top:0;">Still need a hand?</h2>
+        <p class="muted">We usually reply within 1–2 business days.</p>
+        <a class="btn btn-primary" href="mailto:verdancy.contact@gmail.com">Email verdancy.contact@gmail.com</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20C4 10 10 4 20 4C20 14 14 20 4 20Z" fill="#EAF6EC"/><path d="M7 17C12 12 15.5 8.5 19 6" stroke="#2C5C33" stroke-width="1.7" stroke-linecap="round"/></svg></span>Verdancy</a>
+          <p>You grow plants. We grow forests. A calm plant companion that plants real trees.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col"><h4>Product</h4><a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/trees.html">Tree counter</a></div>
+          <div class="footer-col"><h4>Company</h4><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Verdancy · com.verdancy.app</span><span>Trees planted with One Tree Planted 🌱</span></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      function isDark() { var t = root.getAttribute("data-theme"); return t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches; }
+      document.querySelectorAll("[data-theme-toggle]").forEach(function (b) {
+        b.addEventListener("click", function () { var n = isDark() ? "light" : "dark"; root.setAttribute("data-theme", n); try { localStorage.setItem("verdancy-theme", n); } catch (e) {} });
+      });
+    })();
+  </script>
+</body>
+</html>

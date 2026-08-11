@@ -1,23 +1,79 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+}
+const {
+  title = "Verdancy — You grow plants. We grow forests.",
+  description = "Point your camera at any plant — get its name, whether it's pet-safe, and how to keep it thriving in seconds. Subscribe and we plant 10 real trees with One Tree Planted.",
+  path = "/",
+} = Astro.props;
+const site = "https://verdancy.app";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/verdancy_logo.png" />
+    <link rel="canonical" href={site + path} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Verdancy" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={site + "/verdancy_logo.png"} />
+    <meta property="og:url" content={site + path} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={site + "/verdancy_logo.png"} />
+
+    <meta name="theme-color" content="#F6F8F3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#12150F" media="(prefers-color-scheme: dark)" />
+
+    <link rel="stylesheet" href="/verdancy.css" />
+
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem("verdancy-theme");
+          if (t === "dark" || t === "light") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        function currentIsDark() {
+          var t = root.getAttribute("data-theme");
+          if (t) return t === "dark";
+          return window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        function apply(theme) {
+          root.setAttribute("data-theme", theme);
+          try { localStorage.setItem("verdancy-theme", theme); } catch (e) {}
+          var meta = document.querySelector('meta[name="theme-color"]:not([media])');
+        }
+        document.querySelectorAll("[data-theme-toggle]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            apply(currentIsDark() ? "light" : "dark");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
