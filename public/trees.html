@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live Tree Counter — Verdancy</title>
-  <meta name="description" content="Real trees, publicly counted. Every Verdancy subscription plants 10 real trees with One Tree Planted. Watch the live, verified count grow." />
+  <title>Live Tree Counter: Verdancy</title>
+  <meta name="description" content="Real trees, publicly counted. Every Verdancy subscription plants 10 real trees with our partner Tree Nation. Watch the live, verified count grow." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/verdancy_logo.png" />
   <meta name="theme-color" content="#F6F8F3" media="(prefers-color-scheme: light)" />
@@ -57,17 +57,17 @@
     .prov .card { padding: 32px; }
     .prov h2 { font-size: 28px; }
     .prov p { margin-top: 12px; color: var(--text-secondary); font-size: 16px; }
-    .otp-badge {
+    .partner-badge {
       display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
       padding: 40px; text-align: center;
     }
-    .otp-badge .leafmark {
+    .partner-badge .leafmark {
       width: 84px; height: 84px; border-radius: 22px; background: var(--gradient);
       display: flex; align-items: center; justify-content: center;
     }
-    .otp-badge .leafmark svg { width: 52px; height: 52px; }
-    .otp-badge strong { font-size: 18px; }
-    .otp-badge span { color: var(--text-secondary); font-size: 14px; }
+    .partner-badge .leafmark svg { width: 52px; height: 52px; }
+    .partner-badge strong { font-size: 18px; }
+    .partner-badge span { color: var(--text-secondary); font-size: 14px; }
 
     @media (max-width: 800px) {
       .stat-row, .how-grid { grid-template-columns: 1fr; }
@@ -109,12 +109,12 @@
       <div class="container">
         <div class="counter-panel">
           <span class="eyebrow">Real trees, publicly counted</span>
-          <!-- Manual count for now — update this number as trees are planted (or wire to a live source later). -->
+          <!-- Manual count for now. Update this number as trees are planted (or wire to a live source later). -->
           <div class="big-count" id="big-count" data-count-to="200">0</div>
           <p class="sub">real trees planted by the Verdancy community</p>
           <div class="verified">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9 12.5l2 2 4-4.5"/></svg>
-            Verified by One Tree Planted
+            Planted with our partner Tree Nation
           </div>
         </div>
         <p class="updated-line">Updated continuously as subscriptions and care milestones are reached.</p>
@@ -122,7 +122,7 @@
         <div class="stat-row">
           <div class="stat"><div class="n" data-count-to="10">0</div><div class="l">trees per subscriber, year one</div></div>
           <div class="stat"><div class="n" data-count-to="1">0</div><div class="l">extra tree per care milestone</div></div>
-          <div class="stat"><div class="n">100%</div><div class="l">planted with One Tree Planted</div></div>
+          <div class="stat"><div class="n">100%</div><div class="l">planted with Tree Nation</div></div>
         </div>
       </div>
     </section>
@@ -132,23 +132,23 @@
         <div class="section-head">
           <span class="eyebrow">How the count grows</span>
           <h2>Every tree is tied to a real action.</h2>
-          <p>No vague pledges. Each tree on this counter maps to a subscription or a care milestone, then is planted through our partner.</p>
+          <p>No vague pledges. Each tree on this counter maps to a subscription or a care milestone, then is planted through our partner, Tree Nation.</p>
         </div>
         <div class="how-grid">
           <article class="card how">
             <span class="step-num">1</span>
             <h3>You subscribe</h3>
-            <p>Starting a Premium plan commits <strong>10 real trees</strong>, funded and planted with One Tree Planted across your first subscribed year.</p>
+            <p>Starting a Premium plan commits <strong>10 real trees</strong>, funded and planted with our partner Tree Nation across your first subscribed year.</p>
           </article>
           <article class="card how">
             <span class="step-num">2</span>
             <h3>You care &amp; hit milestones</h3>
-            <p>Keep a streak, revive a plant, grow your collection — each milestone plants one more tree on top of your ten.</p>
+            <p>Keep a streak, revive a plant, grow your collection: each milestone plants one more tree on top of your ten.</p>
           </article>
           <article class="card how">
             <span class="step-num">3</span>
             <h3>We plant &amp; count it here</h3>
-            <p>Trees are staggered across the year, planted by One Tree Planted, and reflected on this public counter.</p>
+            <p>Trees are staggered across the year, planted by Tree Nation, and reflected on this public counter.</p>
           </article>
         </div>
       </div>
@@ -161,24 +161,24 @@
             <h2>Why we name our partner</h2>
             <p>
               Anyone can say “we help the planet.” We'd rather show you exactly who plants the trees and
-              exactly how many. Verdancy funds planting through
-              <a href="https://onetreeplanted.org" target="_blank" rel="noopener" style="color:var(--leaf);font-weight:600;">One Tree Planted</a>,
-              a 501(c)(3) non-profit that has planted tens of millions of trees in reforestation projects worldwide.
+              exactly how many. Verdancy is proud to partner with
+              <a href="https://tree-nation.com" target="_blank" rel="noopener" style="color:var(--leaf);font-weight:600;">Tree Nation</a>,
+              a global reforestation platform that funds certified tree-planting projects around the world.
             </p>
             <p>
-              Trees are planted where they do the most good — restoring forests, watersheds and habitat — not
+              Trees are planted where they do the most good: restoring forests, watersheds and habitat, not
               on day one, but staggered across your first year so the commitment is real and lasting.
             </p>
           </div>
-          <div class="card otp-badge">
+          <div class="card partner-badge">
             <span class="leafmark">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 20C4 10 10 4 20 4C20 14 14 20 4 20Z" fill="#EAF6EC"/>
                 <path d="M7 17C12 12 15.5 8.5 19 6" stroke="#2C5C33" stroke-width="1.7" stroke-linecap="round"/>
               </svg>
             </span>
-            <strong>One Tree Planted</strong>
-            <span>Reforestation partner</span>
+            <strong>Tree Nation</strong>
+            <span>Our reforestation partner</span>
           </div>
         </div>
       </div>
@@ -227,7 +227,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 Verdancy · com.verdancy.app</span>
-        <span>Trees planted with One Tree Planted 🌱</span>
+        <span>Trees planted with our partner Tree Nation 🌱</span>
       </div>
     </div>
   </footer>
