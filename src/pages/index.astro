@@ -3,9 +3,8 @@ import Layout from "../layouts/Layout.astro";
 
 // TODO: replace with the real App Store listing id once published (bundle com.verdancy.app)
 const appStoreUrl = "https://apps.apple.com/app/verdancy/id0000000000";
-// Manual count for now. Update this number as trees are planted (or wire to a live source later).
-const treeCount = 200;
-const treeCountFmt = treeCount.toLocaleString("en-US");
+// Public, verified planting profile; the real count lives here (the app links here too).
+const treeNationUrl = "https://tree-nation.com/profile/verdancy";
 ---
 
 <Layout>
@@ -13,12 +12,7 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
   <header class="site-header">
     <div class="container">
       <a class="brand" href="/" aria-label="Verdancy home">
-        <span class="mark">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 20C4 10 10 4 20 4C20 14 14 20 4 20Z" fill="#EAF6EC"/>
-            <path d="M7 17C12 12 15.5 8.5 19 6" stroke="#2C5C33" stroke-width="1.7" stroke-linecap="round"/>
-          </svg>
-        </span>
+        <span class="mark"><img src="/verdancy-mark.png" alt="" width="34" height="34" /></span>
         Verdancy
       </a>
 
@@ -44,9 +38,9 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <a class="pill-badge" href="/trees.html">
+          <a class="pill-badge" href={treeNationUrl} target="_blank" rel="noopener">
             <span class="dot"></span>
-            <strong id="hero-count" data-count-to={treeCount}>{treeCountFmt}</strong>&nbsp;real trees planted
+            Real trees, planted with&nbsp;<strong>Tree Nation</strong>
           </a>
           <h1>You grow plants.<br /><span class="grad-text">We grow forests.</span></h1>
           <p class="lede">
@@ -147,7 +141,7 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V9"/><path d="M12 13c-3.3 0-6-2.7-6-6 3.3 0 6 2.7 6 6Z"/><path d="M12 11c0-3.3 2.7-6 6-6 0 3.3-2.7 6-6 6Z"/><path d="M8 22h8"/></svg>
             </span>
             <h3>Real trees planted</h3>
-            <p>Subscribe and we plant <strong>10 real trees</strong> with our partner Tree Nation, plus one more at every care milestone. Tracked on a public, live counter.</p>
+            <p>Go Premium and we plant real trees with our partner Tree Nation (<strong>10 on an annual plan</strong>), plus one more at every care milestone. Verified on Tree Nation's public profile.</p>
           </article>
           <article class="card pillar">
             <span class="icon-circle terracotta">
@@ -181,7 +175,7 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></svg>
             </span>
             <h3>Smart Scan: Identify</h3>
-            <p>Camera to plant name, taxonomy, pet toxicity and a confidence score in seconds. Your first scan is free.</p>
+            <p>Camera to plant name, taxonomy, pet toxicity and a confidence score in seconds. Two free IDs a day.</p>
           </article>
           <article class="card feature">
             <span class="icon-circle terracotta">
@@ -230,16 +224,16 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
             <span class="eyebrow on-grad">Real trees, publicly counted</span>
             <h2>You grow plants. We grow forests.</h2>
             <p>
-              Every subscription plants <strong>10 real trees</strong> across your first year with{" "}
-              our partner <strong>Tree Nation</strong>, staggered over the months, plus one more at every
-              milestone. No vague “we help the planet.” A real partner, a real number, verified.
+              Every annual subscription funds <strong>10 real trees</strong> through our partner{" "}
+              <strong>Tree Nation</strong> when your first payment clears, plus one more at every
+              milestone. No vague “we help the planet.” A real partner, a real count, verified.
             </p>
             <div class="trees-count">
-              <span class="tc-num" id="trees-count" data-count-to={treeCount}>0</span>
-              <span class="tc-label">trees planted and counting</span>
+              <span class="tc-num">10</span>
+              <span class="tc-label">real trees per subscriber, plus milestones</span>
             </div>
             <div class="trees-actions">
-              <a class="btn btn-onlight" href="/trees.html">Open the live counter</a>
+              <a class="btn btn-onlight" href={treeNationUrl} target="_blank" rel="noopener">See our count on Tree Nation ↗</a>
               <a class="btn btn-ghost-onlight" href={appStoreUrl}>Plant your first seed 🌱</a>
             </div>
           </div>
@@ -274,6 +268,7 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
             <p class="price-note">For casual identifying.</p>
             <ul class="price-list">
               <li>2 plant IDs per day</li>
+              <li>Keep up to 3 plants</li>
               <li class="off">Diagnose sick plants</li>
               <li class="off">Personalized care plans</li>
               <li class="off">Plant Buddies &amp; streaks</li>
@@ -310,12 +305,12 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
               <li>Diagnose sick plants</li>
               <li>Personalized care plans &amp; Today tab</li>
               <li>Plant Buddies, streaks &amp; stats</li>
-              <li>Real trees planted + milestones</li>
+              <li><strong>1 real tree planted</strong> every month + milestones</li>
             </ul>
             <a class="btn btn-secondary price-cta" href={appStoreUrl}>Choose monthly</a>
           </article>
         </div>
-        <p class="price-foot">Trees are planted with our partner Tree Nation, staggered across your first subscribed year. Subscriptions are billed through your Apple ID.</p>
+        <p class="price-foot">Annual plans fund 10 real trees through our partner Tree Nation when your first payment clears; monthly plans fund one tree each month. Subscriptions are billed through your Apple ID.</p>
       </div>
     </section>
 
@@ -344,12 +339,7 @@ const treeCountFmt = treeCount.toLocaleString("en-US");
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="/">
-            <span class="mark">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 20C4 10 10 4 20 4C20 14 14 20 4 20Z" fill="#EAF6EC"/>
-                <path d="M7 17C12 12 15.5 8.5 19 6" stroke="#2C5C33" stroke-width="1.7" stroke-linecap="round"/>
-              </svg>
-            </span>
+            <span class="mark"><img src="/verdancy-mark.png" alt="" width="34" height="34" /></span>
             Verdancy
           </a>
           <p>You grow plants. We grow forests. A calm plant companion that plants real trees.</p>
